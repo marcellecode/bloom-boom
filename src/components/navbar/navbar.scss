@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #F5EFE6;
+    color: #7895b2;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 6vh;
+
+    .logo {
+        font-family: 'Cormorant', serif;
+        width: 33vw;
+        font-weight: 700;
+        font-size: 1.3em;
+    }
+
+    .links {
+        font-family: 'Raleway', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        width: 39vw;
+
+        a {
+            text-decoration: none;
+            color: #7895b2;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+    }
+
+    .language {
+        font-family: 'Raleway', sans-serif;
+        width: 33vw;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+}
