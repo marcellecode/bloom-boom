@@ -3,23 +3,41 @@
     padding: 10px 20px;
     background-color: #F5EFE6;
     color: #7895b2;
-    align-content: flex-start;
-    flex-wrap: nowrap;
+    align-content: center;
+    flex-wrap: wrap;
     align-items: flex-start;
-    height: 6vh;
+    overflow-x: hidden;
+    max-width: 100%;
+    height: fit-content;
+    width: 100%;
+    // flex-direction: row;
+    // justify-content: space-between;
+
+    .header-nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
 
     .logo {
         font-family: 'Cormorant', serif;
-        width: 33vw;
         font-weight: 700;
         font-size: 1.3em;
+    }
+
+    .responsive-icon {
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .links {
         font-family: 'Raleway', sans-serif;
         display: flex;
         justify-content: space-between;
-        width: 39vw;
+        width: 50%;
 
         a {
             text-decoration: none;
@@ -30,11 +48,61 @@
     }
 
     .language {
-        font-family: 'Raleway', sans-serif;
-        width: 33vw;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar {
         display: flex;
-        justify-content: flex-end;
-        font-size: 1.2em;
-        font-weight: 500;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 1000;
+        position: relative;
+
+        .header-nav {
+            display: flex;
+            align-items: flex-start;
+            width: fit-content;
+            justify-content: left;
+            flex-direction: column;
+            width: 80%;
+            
+            .hidden-menu {
+                display: none;
+            }
+
+            .show-menu {
+                font-family: 'Raleway', sans-serif;
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    text-decoration: none;
+                    color: #7895b2;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                }
+
+                .link {
+                    margin: 10px 0px;
+                }
+            }
+        }
+
+
+        .language {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+
+            span {
+                padding-right: 3px;
+            }
+        }
     }
 }
